@@ -15,4 +15,4 @@
 
 ### Pomodoro #4
 
-🟡 Add AWS deployment to GitHub actions
+🟢 Add AWS deployment to GitHub actions
