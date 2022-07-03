@@ -3,4 +3,8 @@
 ### Pomodoro #1
 
 🟡 Set up SonarCloud project and connect SonarLint
-🟡 Add Dockerfile
+🟢 Add Dockerfile
+
+### Pomodoro #2
+
+🟡 Set up SonarCloud project and connect SonarLint
