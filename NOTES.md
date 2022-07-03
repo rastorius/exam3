@@ -8,3 +8,7 @@
 ### Pomodoro #2
 
 🟢 Set up SonarCloud project and connect SonarLint
+
+### Pomodoro #3
+
+🟡 Set up CheckStyle
