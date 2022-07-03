@@ -15,7 +15,7 @@ repositories {
 
 def junitVersion = '5.8.1'
 def assertjVersion = '3.21.0'
-def lombokVersion = '1.18.12'
+def lombokVersion = '1.18.24'
 def cucumberVersion = '6.8.2'
 
 dependencies {
