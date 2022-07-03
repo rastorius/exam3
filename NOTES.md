@@ -7,4 +7,4 @@
 
 ### Pomodoro #2
 
-🟡 Set up SonarCloud project and connect SonarLint
+🟢 Set up SonarCloud project and connect SonarLint

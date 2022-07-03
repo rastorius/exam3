@@ -27,7 +27,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         run: |
-          ./gradlew bootJar --info
+          ./gradlew bootJar sonarqube --info
           docker build -t xp-farm .
           docker tag xp-farm:latest 717641744530.dkr.ecr.us-east-1.amazonaws.com/xp-farm:latest
 
