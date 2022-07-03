@@ -12,3 +12,7 @@
 ### Pomodoro #3
 
 🟢 Set up CheckStyle
+
+### Pomodoro #4
+
+🟡 Add AWS deployment to GitHub actions
