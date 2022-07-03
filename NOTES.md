@@ -11,4 +11,4 @@
 
 ### Pomodoro #3
 
-🟡 Set up CheckStyle
+🟢 Set up CheckStyle
