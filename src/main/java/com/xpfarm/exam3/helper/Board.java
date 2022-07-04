@@ -48,7 +48,8 @@ public class Board {
     }
 
     private boolean hasDiagonalWon() {
-        return hasLineWon(0, 4, 8);
+        return hasLineWon(0, 4, 8)
+                || hasLineWon(2, 4, 6);
     }
 
     private boolean hasLineWon(int a, int b, int c) {
