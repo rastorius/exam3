@@ -42,4 +42,8 @@
 
 🟢 Story - Win - Horizontal #2 (3,4,5)  
 🟢 Story - Win - Horizontal #3 (6,7,8)  
-🟡 Story - Win - Vertical #1 (0,3,6)
+🟢 Story - Win - Vertical #1 (0,3,6)
+
+### Pomodoro #11
+
+🟡 Story - Win - Vertical #2 (1,4,7)
