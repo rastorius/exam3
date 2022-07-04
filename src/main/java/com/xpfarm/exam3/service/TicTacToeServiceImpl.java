@@ -27,6 +27,8 @@ public class TicTacToeServiceImpl implements TicTacToeService {
     @Override
     public String step(int x, int y) {
         board.mark(x, y, currentPlayer);
-        return messageGenerator.printStepHeader(currentPlayer) + board.print();
+        String output = messageGenerator.printStepHeader(currentPlayer) + board.print();
+        currentPlayer = currentPlayer == Symbol.X ? Symbol.O : Symbol.X;
+        return output;
     }
 }

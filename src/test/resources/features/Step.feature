@@ -11,7 +11,7 @@ Feature: Step
     When step to [1,1]
     Then should show step header with X
 
-  Scenario: Switch player after step
+  Scenario: Switch player after first step
     Given new game initialized
     And step to [1,1]
     When step to [1,2]
