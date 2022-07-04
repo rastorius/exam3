@@ -31,13 +31,17 @@ public class Board {
 
     public boolean isGameEnded() {
         return hasHorizontalWon()
-                || hasLineWon(0, 3, 6);
+                || hasVerticalWon();
     }
 
     private boolean hasHorizontalWon() {
         return hasLineWon(0, 1, 2)
                 || hasLineWon(3, 4, 5)
                 || hasLineWon(6, 7, 8);
+    }
+
+    private boolean hasVerticalWon() {
+        return hasLineWon(0, 3, 6);
     }
 
     private boolean hasLineWon(int a, int b, int c) {
