@@ -10,7 +10,9 @@ class MessageGeneratorTest {
     static final String EOL = System.lineSeparator();
 
     @Test
-    @DisplayName("GIVEN new message generator WHEN print board creation header THEN should return correct message")
+    @DisplayName("GIVEN new message generator "
+            + "WHEN print board creation header "
+            + "THEN should return correct message")
     void shouldReturnCorrectBoardCreationHeader() {
         // given
         MessageGenerator messageGenerator = new MessageGenerator();
@@ -24,7 +26,9 @@ class MessageGeneratorTest {
     }
 
     @Test
-    @DisplayName("GIVEN new message generator WHEN print board creation footer THEN should return correct message")
+    @DisplayName("GIVEN new message generator "
+            + "WHEN print board creation footer "
+            + "THEN should return correct message")
     void shouldReturnCorrectBoardCreationFooter() {
         // given
         MessageGenerator messageGenerator = new MessageGenerator();

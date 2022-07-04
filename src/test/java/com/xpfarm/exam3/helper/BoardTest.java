@@ -27,7 +27,9 @@ class BoardTest {
     }
 
     @Test
-    @DisplayName("GIVEN new board and [1,1] marked with X WHEN print THEN should return correct board'")
+    @DisplayName("GIVEN new board and [1,1] marked with X"
+            + "WHEN print"
+            + "THEN should return correct board'")
     void shouldReturnCorrectBoardAfterMark() {
         // given
         Board board = new Board();

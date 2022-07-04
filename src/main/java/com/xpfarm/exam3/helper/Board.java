@@ -12,11 +12,17 @@ public class Board {
                     Symbol.EMPTY, Symbol.EMPTY, Symbol.EMPTY));
 
     public String print() {
-        return symbols.get(0).getValue() + "|" + symbols.get(1).getValue() + "|" + symbols.get(2).getValue() + EOL
+        return symbols.get(0).getValue() + "|"
+                + symbols.get(1).getValue() + "|"
+                + symbols.get(2).getValue() + EOL
                 + "-+-+-" + EOL
-                + symbols.get(3).getValue() + "|" + symbols.get(4).getValue() + "|" + symbols.get(5).getValue() + EOL
+                + symbols.get(3).getValue() + "|"
+                + symbols.get(4).getValue() + "|"
+                + symbols.get(5).getValue() + EOL
                 + "-+-+-" + EOL
-                + symbols.get(6).getValue() + "|" + symbols.get(7).getValue() + "|" + symbols.get(8).getValue() + EOL;
+                + symbols.get(6).getValue() + "|"
+                + symbols.get(7).getValue() + "|"
+                + symbols.get(8).getValue() + EOL;
     }
 
     public void mark(int x, int y, Symbol symbol) {
@@ -24,8 +30,16 @@ public class Board {
     }
 
     public Boolean isGameEnded() {
-        return symbols.get(0) != Symbol.EMPTY
-                && symbols.get(0) == symbols.get(1)
-                && symbols.get(1) == symbols.get(2);
+        return checkLineWon(0, 1, 2);
+    }
+
+    private boolean checkLineWon(int a, int b, int c) {
+        return symbols.get(a) != Symbol.EMPTY
+                && hasLineSameSymbols(a, b, c);
+    }
+
+    private boolean hasLineSameSymbols(int a, int b, int c) {
+        return symbols.get(a) == symbols.get(b)
+                && symbols.get(b) == symbols.get(c);
     }
 }
