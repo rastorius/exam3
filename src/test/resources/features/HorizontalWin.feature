@@ -1,6 +1,6 @@
-Feature: Win
+Feature: Horizontal Win
 
-  Scenario: Should show win horizontal #1 [0,1,2]
+  Scenario: Should show X win horizontal #1 [0,1,2]
     Given new game initialized
     And step to [0,0]
     And step to [1,1]

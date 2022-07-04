@@ -38,3 +38,6 @@
 
 🟢 Story - Win - Horizontal #1 (0,1,2)
 
+### Pomodoro #10
+
+🟡 Story - Win - Horizontal #2 (3,4,5)
