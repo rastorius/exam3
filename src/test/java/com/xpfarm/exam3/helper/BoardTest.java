@@ -64,4 +64,22 @@ class BoardTest {
         // then
         assertThat(actualResult).isTrue();
     }
+
+    @Test
+    @DisplayName("GIVEN X won with [3,4,5] WHEN isGameEnded THEN should return true'")
+    void shouldReturnGameEnded2() {
+        // given
+        Board board = new Board();
+        board.mark(1, 0, Symbol.X);
+        board.mark(0, 2, Symbol.X);
+        board.mark(1, 1, Symbol.X);
+        board.mark(0, 1, Symbol.X);
+        board.mark(1, 2, Symbol.X);
+
+        // when
+        Boolean actualResult = board.isGameEnded();
+
+        // then
+        assertThat(actualResult).isTrue();
+    }
 }
