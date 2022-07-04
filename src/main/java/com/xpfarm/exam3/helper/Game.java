@@ -29,6 +29,10 @@ public class Game {
         return output;
     }
 
+    public GameState getState() {
+        return null;
+    }
+
     private void switchCurrentPlayer() {
         currentPlayer = currentPlayer == Symbol.X ? Symbol.O : Symbol.X;
     }
