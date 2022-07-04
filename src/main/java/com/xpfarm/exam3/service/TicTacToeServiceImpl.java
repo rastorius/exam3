@@ -11,12 +11,13 @@ import org.springframework.stereotype.Service;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class TicTacToeServiceImpl implements TicTacToeService {
     Board board;
+    MessageGenerator messageGenerator;
     Symbol currentPlayer;
 
     @Override
     public String init() {
         board = new Board();
-        MessageGenerator messageGenerator = new MessageGenerator();
+        messageGenerator = new MessageGenerator();
         currentPlayer = Symbol.X;
         return messageGenerator.printBoardCreationHeader()
                 + board.print()
@@ -26,6 +27,6 @@ public class TicTacToeServiceImpl implements TicTacToeService {
     @Override
     public String step(int x, int y) {
         board.mark(x, y, currentPlayer);
-        return board.print();
+        return messageGenerator.printStepHeader(currentPlayer) + board.print();
     }
 }

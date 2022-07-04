@@ -31,4 +31,5 @@
 
 ### Pomodoro #8
 
-🟡 Story - Steps - Should show correct header after first step
+🟢 Story - Steps - Should show correct header after first step
+🟡 Story - Steps - Switch current player after step
