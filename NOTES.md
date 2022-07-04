@@ -23,4 +23,8 @@
 
 ### Pomodoro #6
 
-🟢 Story - Game Board Creation phase - Should show board creation messages 
+🟢 Story - Game Board Creation phase - Should show board creation messages
+
+### Pomodoro #7
+
+🟡 Story - Steps - Should show correct board after first step

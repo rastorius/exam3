@@ -17,4 +17,9 @@ public class TicTacToeServiceImpl implements TicTacToeService {
                 + board.print()
                 + messageGenerator.printBoardCreationFooter();
     }
+
+    @Override
+    public String step(int x, int y) {
+        return null;
+    }
 }
