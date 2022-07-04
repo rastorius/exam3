@@ -8,6 +8,6 @@ public class MessageGenerator {
     }
 
     String printBoardCreationFooter() {
-        return "Game Board Creation..." + EOL;
+        return "The game will start with player X" + EOL;
     }
 }
