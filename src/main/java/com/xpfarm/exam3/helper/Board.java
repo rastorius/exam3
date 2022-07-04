@@ -22,4 +22,8 @@ public class Board {
     public void mark(int x, int y, Symbol symbol) {
         symbols.set(x * 3 + y, symbol);
     }
+    
+    public Boolean isGameEnded() {
+        return false;
+    }
 }
