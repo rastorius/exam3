@@ -31,6 +31,8 @@ public class TicTacToeServiceImpl implements TicTacToeService {
 
         if (board.isGameEnded()) {
             output += messageGenerator.printWonFooter(currentPlayer);
+        } else if (board.isFull()) {
+            output += messageGenerator.printWonFooter(currentPlayer);
         } else {
             switchCurrentPlayer();
         }

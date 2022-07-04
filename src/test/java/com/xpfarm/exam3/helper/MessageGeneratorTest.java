@@ -71,4 +71,18 @@ class MessageGeneratorTest {
         // then
         assertThat(actualResult).isEqualTo(expectedResult);
     }
+
+    @Test
+    @DisplayName("GIVEN message generator WHEN print draw THEN should return correct message")
+    void shouldReturnCorrectDrawMessage() {
+        // given
+        MessageGenerator messageGenerator = new MessageGenerator();
+        String expectedResult = "GAME ENDS WITH A DRAW!" + EOL;
+
+        // when
+        String actualResult = messageGenerator.printDraw();
+
+        // then
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
 }

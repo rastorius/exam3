@@ -19,4 +19,8 @@ public class MessageGenerator {
     public String printWonFooter(Symbol playerSymbol) {
         return "PLAYER " + playerSymbol.getValue() + " WON!" + EOL;
     }
+
+    public String printDraw() {
+        return null;
+    }
 }
