@@ -1,9 +1,10 @@
 package com.xpfarm.exam3.helper;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class Bot {
-    Random random = new Random();
+    SecureRandom random = new SecureRandom();
 
     public String play() {
         Game game = new Game();
