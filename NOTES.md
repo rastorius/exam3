@@ -54,3 +54,7 @@
 
 🟢 Story - Win - Diagonal #2 (2,4,6)
 🟢 Story - Draw
+
+### Pomodoro #12
+
+🟡 Story - Bot game

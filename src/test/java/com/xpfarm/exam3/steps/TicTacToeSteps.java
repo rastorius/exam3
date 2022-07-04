@@ -1,5 +1,6 @@
 package com.xpfarm.exam3.steps;
 
+import com.xpfarm.exam3.helper.Bot;
 import com.xpfarm.exam3.helper.Game;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -14,6 +15,8 @@ public class TicTacToeSteps {
     static final String EOL = System.lineSeparator();
     String output;
     Game game;
+
+    Bot bot;
 
     private String convertNullSymbol(String symbol) {
         return symbol == null ? " " : symbol;
@@ -97,5 +100,24 @@ public class TicTacToeSteps {
     public void thenShouldShowDraw() {
         String expectedOutput = "GAME ENDS WITH A DRAW!" + EOL;
         assertThat(output).contains(expectedOutput);
+    }
+
+    @Given("new bot")
+    public void givenNewBot() {
+        bot = new Bot();
+    }
+
+    @When("play")
+    public void whenPlay() {
+        output = bot.play();
+    }
+
+    @Then("should show valid end message")
+    public void thenShouldShowValidEndMessage() {
+        List<String> validEndMessages = List.of("Player X:" + EOL,
+                "Player O:" + EOL,
+                "GAME ENDS WITH A DRAW!" + EOL);
+
+        assertThat(validEndMessages).contains(output);
     }
 }
