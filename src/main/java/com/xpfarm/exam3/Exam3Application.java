@@ -14,7 +14,8 @@ public class Exam3Application {
     public static void main(String[] args) {
         if (args.length > 0 && args[0].equals("cli")) {
             Bot bot = new Bot();
-            logger.info(bot.play());
+            String output = bot.play();
+            logger.info(output);
         } else {
             SpringApplication.run(Exam3Application.class, args);
         }
