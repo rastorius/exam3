@@ -19,7 +19,7 @@ Feature: Horizontal Win
     When step to [0,2]
     Then should show win with O
 
-  Scenario: Should show X win horizontal #1 [3,4,5]
+  Scenario: Should show X win horizontal #2 [3,4,5]
     Given new game initialized
     And step to [1,0]
     And step to [0,1]
@@ -28,7 +28,7 @@ Feature: Horizontal Win
     When step to [1,2]
     Then should show win with X
 
-  Scenario: Should show O win horizontal #1 [3,4,5]
+  Scenario: Should show O win horizontal #2 [3,4,5]
     Given new game initialized
     And step to [0,0]
     And step to [1,0]
@@ -37,3 +37,12 @@ Feature: Horizontal Win
     And step to [0,2]
     When step to [1,1]
     Then should show win with O
+
+  Scenario: Should show X win horizontal #3 [6,7,8]
+    Given new game initialized
+    And step to [2,0]
+    And step to [0,1]
+    And step to [2,1]
+    And step to [0,2]
+    When step to [2,2]
+    Then should show win with X
