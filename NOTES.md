@@ -69,4 +69,4 @@
 
 ### Pomodoro #15
 
-🟡 Story - CLI
+🟢 Story - CLI
