@@ -36,7 +36,7 @@ public class Board {
     }
 
     public boolean isFull() {
-        return false;
+        return symbols.stream().allMatch(s -> s != Symbol.EMPTY);
     }
 
     private boolean hasHorizontalWon() {
