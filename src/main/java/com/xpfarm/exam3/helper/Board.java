@@ -41,7 +41,8 @@ public class Board {
     }
 
     private boolean hasVerticalWon() {
-        return hasLineWon(0, 3, 6);
+        return hasLineWon(0, 3, 6)
+                || hasLineWon(1, 4, 7);
     }
 
     private boolean hasLineWon(int a, int b, int c) {
