@@ -190,4 +190,26 @@ class BoardTest {
         // then
         assertThat(actualResult).isTrue();
     }
+
+    @Test
+    @DisplayName("GIVEN board is full WHEN isFull THEN should return true'")
+    void shouldReturnBoardFull() {
+        // given
+        Board board = new Board();
+        board.mark(0, 0, Symbol.X);
+        board.mark(0, 2, Symbol.O);
+        board.mark(0, 1, Symbol.X);
+        board.mark(1, 0, Symbol.O);
+        board.mark(2, 0, Symbol.X);
+        board.mark(1, 1, Symbol.O);
+        board.mark(2, 1, Symbol.X);
+        board.mark(2, 2, Symbol.O);
+        board.mark(1, 2, Symbol.X);
+
+        // when
+        Boolean actualResult = board.isFull();
+
+        // then
+        assertThat(actualResult).isTrue();
+    }
 }

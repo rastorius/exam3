@@ -35,6 +35,10 @@ public class Board {
                 || hasDiagonalWon();
     }
 
+    public boolean isFull() {
+        return false;
+    }
+
     private boolean hasHorizontalWon() {
         return hasLineWon(0, 1, 2)
                 || hasLineWon(3, 4, 5)
