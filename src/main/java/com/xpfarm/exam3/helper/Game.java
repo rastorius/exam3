@@ -4,11 +4,13 @@ public class Game {
     Board board;
     MessageGenerator messageGenerator;
     Symbol currentPlayer;
+    GameState gameState;
 
     public String init() {
         board = new Board();
         messageGenerator = new MessageGenerator();
         currentPlayer = Symbol.X;
+        gameState = GameState.IN_PROGRESS;
         return messageGenerator.printBoardCreationHeader()
                 + board.print()
                 + messageGenerator.printBoardCreationFooter();
@@ -30,7 +32,7 @@ public class Game {
     }
 
     public GameState getState() {
-        return null;
+        return gameState;
     }
 
     private void switchCurrentPlayer() {
