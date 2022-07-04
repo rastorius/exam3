@@ -56,4 +56,19 @@ class MessageGeneratorTest {
         // then
         assertThat(actualResult).isEqualTo(expectedResult);
     }
+
+    @Test
+    @DisplayName("GIVEN player won WHEN print won footer THEN should return correct message")
+    void shouldReturnCorrectWonFooter() {
+        // given
+        MessageGenerator messageGenerator = new MessageGenerator();
+        Symbol playerSymbol = Symbol.X;
+        String expectedResult = "PLAYER " + playerSymbol.getValue() + " WON!" + EOL;
+
+        // when
+        String actualResult = messageGenerator.printWonFooter(playerSymbol);
+
+        // then
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
 }

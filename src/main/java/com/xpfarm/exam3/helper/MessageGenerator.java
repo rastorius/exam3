@@ -15,4 +15,8 @@ public class MessageGenerator {
     public String printStepHeader(Symbol playerSymbol) {
         return "Player " + playerSymbol.getValue() + ":" + EOL;
     }
+    
+    public String printWonFooter(Symbol playerSymbol) {
+        return null;
+    }
 }
