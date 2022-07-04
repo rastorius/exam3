@@ -27,4 +27,4 @@
 
 ### Pomodoro #7
 
-🟡 Story - Steps - Should show correct board after first step
+🟢 Story - Steps - Should show correct board after first step

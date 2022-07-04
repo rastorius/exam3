@@ -2,6 +2,7 @@ package com.xpfarm.exam3.service;
 
 import com.xpfarm.exam3.helper.Board;
 import com.xpfarm.exam3.helper.MessageGenerator;
+import com.xpfarm.exam3.helper.Symbol;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
@@ -9,10 +10,14 @@ import org.springframework.stereotype.Service;
 @Service
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class TicTacToeServiceImpl implements TicTacToeService {
+    Board board;
+    Symbol currentPlayer;
+
     @Override
     public String init() {
-        Board board = new Board();
+        board = new Board();
         MessageGenerator messageGenerator = new MessageGenerator();
+        currentPlayer = Symbol.X;
         return messageGenerator.printBoardCreationHeader()
                 + board.print()
                 + messageGenerator.printBoardCreationFooter();
@@ -20,6 +25,7 @@ public class TicTacToeServiceImpl implements TicTacToeService {
 
     @Override
     public String step(int x, int y) {
-        return null;
+        board.mark(x, y, currentPlayer);
+        return board.print();
     }
 }
