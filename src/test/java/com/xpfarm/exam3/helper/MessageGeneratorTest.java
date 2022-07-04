@@ -28,7 +28,8 @@ class MessageGeneratorTest {
     void shouldReturnCorrectBoardCreationFooter() {
         // given
         MessageGenerator messageGenerator = new MessageGenerator();
-        String expectedResult = "The game will start with player X" + EOL;
+        String expectedResult = "Board Created." + EOL
+                + "The game will start with player X" + EOL;
 
         // when
         String actualResult = messageGenerator.printBoardCreationFooter();
