@@ -16,3 +16,7 @@
 ### Pomodoro #4
 
 🟢 Add AWS deployment to GitHub actions
+
+### Pomodoro #5
+
+🟡 Story - Game Board Creation phase - Should show empty board
