@@ -30,7 +30,8 @@ public class Board {
     }
 
     public boolean isGameEnded() {
-        return hasHorizontalWon();
+        return hasHorizontalWon()
+                || hasLineWon(0, 3, 6);
     }
 
     private boolean hasHorizontalWon() {
