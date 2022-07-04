@@ -32,9 +32,13 @@ public class TicTacToeServiceImpl implements TicTacToeService {
         if (board.isGameEnded()) {
             output += messageGenerator.printWonFooter(currentPlayer);
         } else {
-            currentPlayer = currentPlayer == Symbol.X ? Symbol.O : Symbol.X;
+            switchCurrentPlayer();
         }
 
         return output;
+    }
+
+    private void switchCurrentPlayer() {
+        currentPlayer = currentPlayer == Symbol.X ? Symbol.O : Symbol.X;
     }
 }
