@@ -1,6 +1,6 @@
 package com.xpfarm.exam3.steps;
 
-import com.xpfarm.exam3.service.Game;
+import com.xpfarm.exam3.helper.Game;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

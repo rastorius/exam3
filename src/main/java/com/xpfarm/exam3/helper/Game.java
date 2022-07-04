@@ -1,9 +1,4 @@
-package com.xpfarm.exam3.service;
-
-import com.xpfarm.exam3.helper.Board;
-import com.xpfarm.exam3.helper.MessageGenerator;
-import com.xpfarm.exam3.helper.Symbol;
-
+package com.xpfarm.exam3.helper;
 
 public class Game {
     Board board;
