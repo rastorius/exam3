@@ -1,6 +1,7 @@
 package com.xpfarm.exam3.service;
 
 import com.xpfarm.exam3.helper.Board;
+import com.xpfarm.exam3.helper.MessageGenerator;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
@@ -11,6 +12,9 @@ public class TicTacToeServiceImpl implements TicTacToeService {
     @Override
     public String init() {
         Board board = new Board();
-        return board.print();
+        MessageGenerator messageGenerator = new MessageGenerator();
+        return messageGenerator.printBoardCreationHeader()
+                + board.print()
+                + messageGenerator.printBoardCreationFooter();
     }
 }
