@@ -30,12 +30,16 @@ public class Board {
     }
 
     public boolean isGameEnded() {
-        return checkLineWon(0, 1, 2)
-                || checkLineWon(3, 4, 5)
-                || checkLineWon(6, 7, 8);
+        return hasHorizontalWon();
     }
 
-    private boolean checkLineWon(int a, int b, int c) {
+    private boolean hasHorizontalWon() {
+        return hasLineWon(0, 1, 2)
+                || hasLineWon(3, 4, 5)
+                || hasLineWon(6, 7, 8);
+    }
+
+    private boolean hasLineWon(int a, int b, int c) {
         return symbols.get(a) != Symbol.EMPTY
                 && hasLineSameSymbols(a, b, c);
     }
