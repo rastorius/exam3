@@ -26,7 +26,6 @@ class GameTest {
     void shouldReturnGameOver() {
         // given
         Game game = new Game();
-        GameState expectedResult = GameState.GAME_OVER;
         game.init();
         game.step(0, 0);
         game.step(0, 2);
@@ -37,6 +36,7 @@ class GameTest {
         game.step(2, 1);
         game.step(2, 2);
         game.step(1, 2);
+        GameState expectedResult = GameState.GAME_OVER;
 
         // when
         GameState actualResult = game.getState();
@@ -50,13 +50,14 @@ class GameTest {
     void shouldReturnGameOver2() {
         // given
         Game game = new Game();
-        GameState expectedResult = GameState.GAME_OVER;
         game.init();
         game.step(0, 0);
         game.step(1, 2);
         game.step(0, 1);
         game.step(1, 0);
         game.step(0, 2);
+        GameState expectedResult = GameState.GAME_OVER;
+
         // when
         GameState actualResult = game.getState();
 
@@ -69,7 +70,6 @@ class GameTest {
     void shouldReturnGameOver3() {
         // given
         Game game = new Game();
-        GameState expectedResult = GameState.GAME_OVER;
         game.init();
         game.step(2, 2);
         game.step(0, 0);
@@ -77,6 +77,8 @@ class GameTest {
         game.step(0, 1);
         game.step(1, 0);
         game.step(0, 2);
+        GameState expectedResult = GameState.GAME_OVER;
+
         // when
         GameState actualResult = game.getState();
 
@@ -85,7 +87,9 @@ class GameTest {
     }
 
     @Test
-    @DisplayName("GIVEN game in progress WHEN isStepPossible for free position THEN should return true")
+    @DisplayName("GIVEN game in progress "
+            + "WHEN isStepPossible for free position "
+            + "THEN should return true")
     void shouldReturnGameOverTrue() {
         // given
         Game game = new Game();
