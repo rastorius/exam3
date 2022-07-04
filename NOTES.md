@@ -53,4 +53,4 @@
 ### Pomodoro #12
 
 🟢 Story - Win - Diagonal #2 (2,4,6)
-🟡 Story - Draw
+🟢 Story - Draw
