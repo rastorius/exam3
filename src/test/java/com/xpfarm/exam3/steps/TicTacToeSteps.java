@@ -1,7 +1,6 @@
 package com.xpfarm.exam3.steps;
 
-import com.xpfarm.exam3.service.TicTacToeService;
-import com.xpfarm.exam3.service.TicTacToeServiceImpl;
+import com.xpfarm.exam3.service.Game;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -14,7 +13,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class TicTacToeSteps {
     static final String EOL = System.lineSeparator();
     String output;
-    TicTacToeService ticTacToeService;
+    Game game;
 
     private String convertNullSymbol(String symbol) {
         return symbol == null ? " " : symbol;
@@ -36,14 +35,14 @@ public class TicTacToeSteps {
                 + convertNullSymbol(symbols.get(8)) + EOL;
     }
 
-    @Given("new tic-tact-toe service")
-    public void givenNewTicTacToeService() {
-        ticTacToeService = new TicTacToeServiceImpl();
+    @Given("new game")
+    public void givenNewGame() {
+        game = new Game();
     }
 
     @When("initialize")
     public void whenExecuteInit() {
-        output = ticTacToeService.init();
+        output = game.init();
     }
 
     @Then("should show empty board")
@@ -67,13 +66,13 @@ public class TicTacToeSteps {
 
     @Given("new game initialized")
     public void givenNextPlayerIs() {
-        ticTacToeService = new TicTacToeServiceImpl();
-        ticTacToeService.init();
+        game = new Game();
+        game.init();
     }
 
     @When("step to [{int},{int}]")
     public void whenStepTo(int x, int y) {
-        output = ticTacToeService.step(x, y);
+        output = game.step(x, y);
     }
 
     @Then("should show board")
