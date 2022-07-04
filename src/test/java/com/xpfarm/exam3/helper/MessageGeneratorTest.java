@@ -11,13 +11,27 @@ class MessageGeneratorTest {
 
     @Test
     @DisplayName("GIVEN new message generator WHEN print board creation header THEN should return correct message")
-    void shouldReturnHelloWorld() {
+    void shouldReturnCorrectBoardCreationHeader() {
         // given
         MessageGenerator messageGenerator = new MessageGenerator();
         String expectedResult = "Game Board Creation..." + EOL;
 
         // when
-        String actualResult = messageGenerator.printNewGameHeader();
+        String actualResult = messageGenerator.printBoardCreationHeader();
+
+        // then
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
+    @Test
+    @DisplayName("GIVEN new message generator WHEN print board creation footer THEN should return correct message")
+    void shouldReturnCorrectBoardCreationFooter() {
+        // given
+        MessageGenerator messageGenerator = new MessageGenerator();
+        String expectedResult = "The game will start with player X" + EOL;
+
+        // when
+        String actualResult = messageGenerator.printBoardCreationFooter();
 
         // then
         assertThat(actualResult).isEqualTo(expectedResult);
