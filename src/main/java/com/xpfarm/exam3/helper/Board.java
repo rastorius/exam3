@@ -30,7 +30,7 @@ public class Board {
     }
 
     public boolean isPositionEmpty(int x, int y) {
-        return true;
+        return symbols.get(x * 3 + y) == Symbol.EMPTY;
     }
 
     public boolean isGameEnded() {
