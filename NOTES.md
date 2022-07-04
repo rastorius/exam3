@@ -20,3 +20,7 @@
 ### Pomodoro #5
 
 🟢 Story - Game Board Creation phase - Should show empty board
+
+### Pomodoro #6
+
+🟡 Story - Game Board Creation phase - Should show board creation messages 

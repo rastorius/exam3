@@ -4,3 +4,8 @@ Feature: Game Board Creation
     Given new tic-tact-toe service
     When initialize
     Then should show empty board
+
+  Scenario: Should show board creation messages
+    Given new tic-tact-toe service
+    When initialize
+    Then should show board creation messages
