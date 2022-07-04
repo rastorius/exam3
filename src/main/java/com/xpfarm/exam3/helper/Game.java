@@ -21,6 +21,7 @@ public class Game {
         String output = messageGenerator.printStepHeader(currentPlayer) + board.print();
 
         if (board.isGameEnded()) {
+            gameState = GameState.GAME_OVER;
             output += messageGenerator.printWonFooter(currentPlayer);
         } else if (board.isFull()) {
             gameState = GameState.GAME_OVER;
