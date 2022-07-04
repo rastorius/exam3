@@ -29,6 +29,10 @@ public class Board {
         symbols.set(x * 3 + y, symbol);
     }
 
+    public boolean isPositionEmpty(int x, int y) {
+        return true;
+    }
+
     public boolean isGameEnded() {
         return hasHorizontalWon()
                 || hasVerticalWon()
