@@ -46,3 +46,13 @@ Feature: Horizontal Win
     And step to [0,2]
     When step to [2,2]
     Then should show win with X
+
+  Scenario: Should show O win horizontal #3 [6,7,8]
+    Given new game initialized
+    And step to [2,0]
+    And step to [1,0]
+    And step to [2,1]
+    And step to [1,1]
+    And step to [0,2]
+    When step to [1,2]
+    Then should show win with O
