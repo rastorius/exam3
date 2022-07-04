@@ -42,6 +42,6 @@ public class Game {
     }
 
     public boolean isStepPossible(int position) {
-        return false;
+        return board.isPositionEmpty(position);
     }
 }

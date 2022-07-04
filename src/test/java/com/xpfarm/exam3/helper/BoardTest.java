@@ -221,7 +221,7 @@ class BoardTest {
         board.mark(0, 0, Symbol.X);
 
         // when
-        Boolean actualResult = board.isPositionEmpty(0, 0);
+        Boolean actualResult = board.isPositionEmpty(0);
 
         // then
         assertThat(actualResult).isFalse();
@@ -235,7 +235,7 @@ class BoardTest {
         board.mark(0, 0, Symbol.O);
 
         // when
-        Boolean actualResult = board.isPositionEmpty(0, 0);
+        Boolean actualResult = board.isPositionEmpty(0);
 
         // then
         assertThat(actualResult).isFalse();

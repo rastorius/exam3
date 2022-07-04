@@ -29,8 +29,8 @@ public class Board {
         symbols.set(x * 3 + y, symbol);
     }
 
-    public boolean isPositionEmpty(int x, int y) {
-        return symbols.get(x * 3 + y) == Symbol.EMPTY;
+    public boolean isPositionEmpty(int position) {
+        return symbols.get(position) == Symbol.EMPTY;
     }
 
     public boolean isGameEnded() {
