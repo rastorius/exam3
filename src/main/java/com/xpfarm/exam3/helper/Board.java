@@ -11,4 +11,8 @@ public class Board {
                 + "-+-+-" + EOL
                 + EMPTY_LINE + EOL;
     }
+
+    public void mark(int x, int y, Symbol symbol) {
+        
+    }
 }
