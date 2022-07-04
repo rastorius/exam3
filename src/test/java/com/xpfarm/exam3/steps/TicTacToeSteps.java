@@ -93,4 +93,10 @@ public class TicTacToeSteps {
         String expectedOutput = "PLAYER " + player + " WON!" + EOL;
         assertThat(output).contains(expectedOutput);
     }
+
+    @Then("should show draw")
+    public void thenShouldShowDraw() {
+        String expectedOutput = "GAME ENDS WITH A DRAW!" + EOL;
+        assertThat(output).contains(expectedOutput);
+    }
 }
