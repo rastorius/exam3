@@ -30,7 +30,8 @@ public class Board {
     }
 
     public boolean isGameEnded() {
-        return checkLineWon(0, 1, 2);
+        return checkLineWon(0, 1, 2)
+                || checkLineWon(3, 4, 5);
     }
 
     private boolean checkLineWon(int a, int b, int c) {
