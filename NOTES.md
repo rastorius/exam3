@@ -31,7 +31,7 @@
 
 ### Pomodoro #8
 
-🟢 Story - Steps - Should show correct header after first step
+🟢 Story - Steps - Should show correct header after first step  
 🟢 Story - Steps - Switch current player after step
 
 ### Pomodoro #9
@@ -40,6 +40,6 @@
 
 ### Pomodoro #10
 
-🟢 Story - Win - Horizontal #2 (3,4,5)
-🟢 Story - Win - Horizontal #3 (6,7,8)
+🟢 Story - Win - Horizontal #2 (3,4,5)  
+🟢 Story - Win - Horizontal #3 (6,7,8)  
 🟡 Story - Win - Vertical #1 (0,3,6)
