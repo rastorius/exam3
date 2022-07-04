@@ -28,3 +28,7 @@
 ### Pomodoro #7
 
 🟢 Story - Steps - Should show correct board after first step
+
+### Pomodoro #8
+
+🟡 Story - Steps - Should show correct header after first step

@@ -5,3 +5,8 @@ Feature: Step
     When step to [1,1]
     Then should show board
       | | | | |X| | | | |
+
+  Scenario: Should show correct header after first step
+    Given new game initialized
+    When step to [1,1]
+    Then should show step header with X

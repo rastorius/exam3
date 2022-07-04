@@ -79,7 +79,12 @@ public class TicTacToeSteps {
     @Then("should show board")
     public void thenShouldShowBoard(DataTable table) {
         String expectedOutput = convertToBoardOutput(table);
-        System.out.println(expectedOutput);
+        assertThat(output).contains(expectedOutput);
+    }
+
+    @Then("should show step header with {}")
+    public void thenShouldShowStepHeaderWith(String player) {
+        String expectedOutput = "Player " + player + ":";
         assertThat(output).contains(expectedOutput);
     }
 }
