@@ -61,4 +61,8 @@
 
 ### Pomodoro #13
 
-🟡 Story - Bot game
+🟢 Story - Bot game
+
+### Pomodoro #14
+
+🟡 Story - Rest API

@@ -114,10 +114,6 @@ public class TicTacToeSteps {
 
     @Then("should show valid end message")
     public void thenShouldShowValidEndMessage() {
-        List<String> validEndMessages = List.of("Player X:" + EOL,
-                "Player O:" + EOL,
-                "GAME ENDS WITH A DRAW!" + EOL);
-
-        assertThat(validEndMessages).contains(output);
+        assertThat(output).containsAnyOf("Player X:" + EOL, "Player O:" + EOL, "GAME ENDS WITH A DRAW!" + EOL);
     }
 }
