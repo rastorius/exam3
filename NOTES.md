@@ -66,3 +66,7 @@
 ### Pomodoro #14
 
 🟢 Story - Rest API
+
+### Pomodoro #15
+
+🟡 Story - CLI

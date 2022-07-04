@@ -7,7 +7,7 @@ public class Bot {
 
     public String play() {
         Game game = new Game();
-        StringBuilder output = new StringBuilder();
+        StringBuilder output = new StringBuilder(System.lineSeparator());
         output.append(game.init());
 
         while (game.getState() == GameState.IN_PROGRESS) {
