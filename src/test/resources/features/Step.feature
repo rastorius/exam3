@@ -17,3 +17,11 @@ Feature: Step
     When step to [1,2]
     Then should show board
       | | | | |X|O| | | |
+
+  Scenario: Switch player after second step
+    Given new game initialized
+    And step to [1,1]
+    And step to [0,0]
+    When step to [1,2]
+    Then should show board
+      |O| | | |X|X| | | |
