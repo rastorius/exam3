@@ -226,4 +226,18 @@ class BoardTest {
         // then
         assertThat(actualResult).isFalse();
     }
+
+    @Test
+    @DisplayName("GIVEN board and [0,0] marked O WHEN isPositionEmpty THEN should return false")
+    void shouldReturnPositionNotEmpty2() {
+        // given
+        Board board = new Board();
+        board.mark(0, 0, Symbol.O);
+
+        // when
+        Boolean actualResult = board.isPositionEmpty(0, 0);
+
+        // then
+        assertThat(actualResult).isFalse();
+    }
 }
