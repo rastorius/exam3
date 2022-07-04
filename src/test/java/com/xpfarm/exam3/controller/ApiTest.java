@@ -11,29 +11,38 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ContextConfiguration(classes = Exam3Application.class, loader = SpringBootContextLoader.class)
 @AutoConfigureMockMvc
 class ApiTest {
+
+    static final String EOL = System.lineSeparator();
+
     @Autowired
     MockMvc mockMvc;
 
     @Test
-    @DisplayName("GIVEN WHEN requesting hello THEN should return 'Hello World!'")
-    void shouldReturnHelloWorld() throws Exception {
+    @DisplayName("GIVEN tic-tac-toe url WHEN requesting bot game THEN should return game output")
+    void shouldReturnGameOutput() throws Exception {
         // given
-        String expectedResponse = "Hello World!";
 
+        // when
         ResultActions resultActions = mockMvc.perform(
-                get("/api/hello")
+                get("/api/bot-game")
         );
 
         // then
         resultActions.andExpect(status().isOk());
-        resultActions.andExpect(content().string(expectedResponse));
+
+        String response = resultActions.andReturn().getResponse().getContentAsString();
+        assertThat(response).containsAnyOf(
+                "Player X:" + EOL,
+                "Player O:" + EOL,
+                "GAME ENDS WITH A DRAW!" + EOL
+        );
     }
 }
