@@ -29,7 +29,7 @@ public class Board {
         symbols.set(x * 3 + y, symbol);
     }
 
-    public Boolean isGameEnded() {
+    public boolean isGameEnded() {
         return checkLineWon(0, 1, 2);
     }
 

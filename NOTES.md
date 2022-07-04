@@ -36,5 +36,5 @@
 
 ### Pomodoro #9
 
-🟡 Story - Win - Horizontal #1 (0,1,2)
+🟢 Story - Win - Horizontal #1 (0,1,2)
 

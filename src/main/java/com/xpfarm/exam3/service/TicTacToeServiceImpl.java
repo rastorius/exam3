@@ -28,7 +28,13 @@ public class TicTacToeServiceImpl implements TicTacToeService {
     public String step(int x, int y) {
         board.mark(x, y, currentPlayer);
         String output = messageGenerator.printStepHeader(currentPlayer) + board.print();
-        currentPlayer = currentPlayer == Symbol.X ? Symbol.O : Symbol.X;
+
+        if (board.isGameEnded()) {
+            output += messageGenerator.printWonFooter(currentPlayer);
+        } else {
+            currentPlayer = currentPlayer == Symbol.X ? Symbol.O : Symbol.X;
+        }
+
         return output;
     }
 }
