@@ -20,4 +20,28 @@ class GameTest {
         // then
         assertThat(actualResult).isEqualTo(expectedResult);
     }
+
+    @Test
+    @DisplayName("GIVEN draw WHEN getState THEN should return GAME_OVER")
+    void shouldReturnGameOver() {
+        // given
+        Game game = new Game();
+        GameState expectedResult = GameState.GAME_OVER;
+        game.init();
+        game.step(0, 0);
+        game.step(0, 2);
+        game.step(0, 1);
+        game.step(1, 0);
+        game.step(2, 0);
+        game.step(1, 1);
+        game.step(2, 1);
+        game.step(2, 2);
+        game.step(1, 2);
+
+        // when
+        GameState actualResult = game.getState();
+
+        // then
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
 }
