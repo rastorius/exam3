@@ -5,22 +5,19 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class BoardTest {
+class MessageGeneratorTest {
+
     static final String EOL = System.lineSeparator();
 
     @Test
-    @DisplayName("GIVEN new board WHEN print THEN should return empty board'")
+    @DisplayName("GIVEN new message generator WHEN print board creation header THEN should return correct message")
     void shouldReturnHelloWorld() {
         // given
-        Board board = new Board();
-        String expectedResult = " | | " + EOL
-                + "-+-+-" + EOL
-                + " | | " + EOL
-                + "-+-+-" + EOL
-                + " | | " + EOL;
+        MessageGenerator messageGenerator = new MessageGenerator();
+        String expectedResult = "Game Board Creation..." + EOL;
 
         // when
-        String actualResult = board.print();
+        String actualResult = messageGenerator.printNewGameHeader();
 
         // then
         assertThat(actualResult).isEqualTo(expectedResult);
