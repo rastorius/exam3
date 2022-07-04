@@ -83,4 +83,19 @@ class GameTest {
         // then
         assertThat(actualResult).isEqualTo(expectedResult);
     }
+
+    @Test
+    @DisplayName("GIVEN game in progress WHEN isStepPossible for free position THEN should return true")
+    void shouldReturnGameOverTrue() {
+        // given
+        Game game = new Game();
+        game.init();
+        game.step(2, 2);
+
+        // when
+        boolean actualResult = game.isStepPossible(0);
+
+        // then
+        assertThat(actualResult).isTrue();
+    }
 }

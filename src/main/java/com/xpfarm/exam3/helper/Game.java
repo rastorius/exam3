@@ -40,4 +40,8 @@ public class Game {
     private void switchCurrentPlayer() {
         currentPlayer = currentPlayer == Symbol.X ? Symbol.O : Symbol.X;
     }
+
+    public boolean isStepPossible(int position) {
+        return false;
+    }
 }
