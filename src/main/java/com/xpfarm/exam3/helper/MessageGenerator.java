@@ -21,6 +21,6 @@ public class MessageGenerator {
     }
 
     public String printDraw() {
-        return null;
+        return "GAME ENDS WITH A DRAW!" + EOL;
     }
 }
