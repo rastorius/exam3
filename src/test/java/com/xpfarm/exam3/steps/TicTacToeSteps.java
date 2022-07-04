@@ -84,7 +84,7 @@ public class TicTacToeSteps {
 
     @Then("should show step header with {}")
     public void thenShouldShowStepHeaderWith(String player) {
-        String expectedOutput = "Player " + player + ":";
+        String expectedOutput = "Player " + player + ":" + EOL;
         assertThat(output).contains(expectedOutput);
     }
 }

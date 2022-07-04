@@ -11,4 +11,8 @@ public class MessageGenerator {
         return "Board Created." + EOL
                 + "The game will start with player X" + EOL;
     }
+
+    public String printStepHeader(Symbol playerSymbol) {
+        return null;
+    }
 }

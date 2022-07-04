@@ -37,4 +37,19 @@ class MessageGeneratorTest {
         // then
         assertThat(actualResult).isEqualTo(expectedResult);
     }
+
+    @Test
+    @DisplayName("GIVEN player symbol WHEN print step header THEN should return correct message")
+    void shouldReturnCorrectStepHeader() {
+        // given
+        MessageGenerator messageGenerator = new MessageGenerator();
+        Symbol playerSymbol = Symbol.X;
+        String expectedResult = "Player " + playerSymbol.getValue() + ":" + EOL;
+
+        // when
+        String actualResult = messageGenerator.printStepHeader(playerSymbol);
+
+        // then
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
 }
